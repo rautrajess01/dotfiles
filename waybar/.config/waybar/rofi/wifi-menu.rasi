@@ -1,0 +1,112 @@
+* {
+    bg: #1e1e2e;         /* very dark blue/gray background */
+    bg-alt: #181825;     /* even darker */
+    fg: #cdd6f4;         /* soft off-white text */
+    blue: #89b4fa;       /* soft blue accent */
+    red: #f38ba8;        /* soft red for urgent */
+    border-width: 2px;
+}
+
+window {
+    width: 420px;
+    background-color: @bg;
+    border: @border-width;
+    border-color: @blue;
+}
+
+element {
+    padding: 8px 16px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.urgent {
+    background-color: @red;
+    text-color: @bg;
+}
+
+element normal.active {
+    background-color: @blue;
+    text-color: @bg;
+}
+
+element selected.normal {
+    background-color: @blue;
+    text-color: @bg;
+}
+
+element selected.urgent {
+    background-color: @red;
+    text-color: @bg;
+}
+
+element selected.active {
+    background-color: @blue;
+    text-color: @bg;
+}
+
+scrollbar {
+    width: 6px;
+    border: 0;
+    handle-color: @blue;
+    handle-width: 10px;
+}
+
+sidebar {
+    border: 0;
+    background-color: @bg-alt;
+}
+
+button {
+    spacing: 0;
+    text-color: @fg;
+    background-color: transparent;
+}
+
+button selected {
+    background-color: @blue;
+    text-color: @bg;
+}
+
+inputbar {
+    spacing: 0;
+    text-color: @fg;
+    background-color: @bg-alt;
+    border: 0;
+    children: [prompt, entry];
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+}
+
+mainbox {
+    children: [inputbar, listview];
+}
+
+message {
+    border: @border-width;
+    border-color: @blue;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+textbox {
+    text-color: @fg;
+    background-color: transparent;
+}
+
+error-message {
+    border: @border-width;
+    border-color: @red;
+    background-color: @bg;
+    text-color: @red;
+}
+

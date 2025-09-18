@@ -1,0 +1,40 @@
+
+
+// ### DEFAULT Laptop  - Top ### //
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "top",
+"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": "/tmp/waybar-ipc.sock",
+  "margin-top": 1,
+"margin-left": 1,
+"margin-right": 1,
+
+"modules-left": [
+		"hyprland/workspaces#rw",
+  ],
+
+"modules-center": [	
+	"clock",
+	],
+
+"modules-right": [
+    "group/notify",
+  "wlr/taskbar", 
+  "group/connections",
+  "memory",
+  "battery",
+  "group/status"
+],
+}

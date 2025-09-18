@@ -1,0 +1,178 @@
+/* Modern glass style for Waybar – compact, clean, and minimal */
+
+window#waybar {
+  font-family: "JetBrains Mono NerdFont";
+  background: transparent;
+  color: #cdd6f4; /* light foreground */
+  font-size: 11px; /* smaller overall height */
+}
+
+/* Segment containers */
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: rgba(24, 24, 27, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 2px 6px; /* tighter */
+  margin: 4px 6px;  /* tighter */
+}
+
+/* Tighten center segment visually */
+.modules-center {
+  padding: 1px 8px; /* tighter */
+}
+
+/* Workspace pills */
+#workspaces {
+  background: transparent;
+  padding: 0 2px;
+}
+
+#workspaces button {
+  background: transparent;
+  color: #a6adc8; /* muted */
+  border: none;
+  border-radius: 9999px;
+  padding: 1px 6px; /* tighter */
+  margin: 1px 3px;  /* tighter */
+  transition: background 120ms ease, color 120ms ease;
+}
+
+#workspaces button:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #cdd6f4;
+}
+
+#workspaces button.active {
+  background-color: rgba(137, 180, 250, 0.18); /* accent glass */
+  color: #cdd6f4;
+  font-weight: 600;
+}
+
+#workspaces button.urgent {
+  background-color: rgba(243, 139, 168, 0.25);
+  color: #f38ba8;
+}
+
+/* Window title */
+#window {
+  background: transparent;
+  color: #bac2de;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* Clock centered, slightly emphasized */
+#clock {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 1px 8px; /* tighter */
+  border-radius: 9999px;
+}
+
+/* Right-side modules unified look */
+#taskbar,
+#tray,
+#battery,
+#memory,
+#disk,
+#cpu,
+#temperature,
+#network,
+#pulseaudio,
+#pulseaudio.microphone,
+#bluetooth,
+#custom-vpn,
+#power-profiles-daemon,
+#custom-power,
+#custom-lock,
+#custom-swaync,
+#custom-updater {
+  color: #cdd6f4;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* Taskbar buttons */
+#taskbar button {
+  background: transparent;
+  color: #cdd6f4;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 2px 6px;
+  margin: 0 2px;
+}
+
+#taskbar button.active {
+  background-color: rgba(137, 180, 250, 0.18);
+  border-color: rgba(137, 180, 250, 0.28);
+}
+
+#taskbar button:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Subtle status accents */
+#battery.charging {
+  color: #a6e3a1;
+}
+
+#network.disconnected {
+  color: #f38ba8;
+}
+
+#pulseaudio.muted {
+  color: #9399b2;
+}
+
+/* Wi-Fi/network pill styling */
+#network {
+  background-color: rgba(137, 180, 250, 0.10);
+  border: 1px solid rgba(137, 180, 250, 0.20);
+  color: #cdd6f4;
+}
+
+#network.wifi {
+  background-color: rgba(137, 180, 250, 0.12);
+  border-color: rgba(137, 180, 250, 0.28);
+}
+
+#network.ethernet {
+  background-color: rgba(148, 226, 213, 0.12);
+  border-color: rgba(148, 226, 213, 0.28);
+}
+
+#network.disconnected,
+#network.disabled {
+  background-color: rgba(243, 139, 168, 0.10);
+  border-color: rgba(243, 139, 168, 0.25);
+  color: #f38ba8;
+}
+
+/* Tighter icon/text spacing for network */
+#network image, #network label {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+/* Separators */
+#custom-separator.dot-line,
+#custom-separator.dot,
+#custom-separator.line {
+  color: rgba(255, 255, 255, 0.18);
+  padding: 0 4px;
+}
+
+/* Tooltips */
+tooltip {
+  background-color: rgba(24, 24, 27, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+tooltip label {
+  color: #cdd6f4;
+}
+/* Connection modules keep default spacing for visibility */
+
